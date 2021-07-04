@@ -741,7 +741,9 @@ section {
   left: auto !important;
   top: auto !important; 
 }
-
+.portfolio-container{
+  height: auto !important;
+}
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 0 35px 0;
@@ -1458,7 +1460,7 @@ section {
 }
 
 .portfolio .section-title{
-  margin-top: 30px;
+  margin-top: 50px;
   padding-bottom: 0px;
 }
 .photo-footer{
