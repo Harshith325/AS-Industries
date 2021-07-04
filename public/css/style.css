@@ -1478,6 +1478,7 @@ section {
 .photo-footer{
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 .photo-footer a{
   color: black;
@@ -1498,3 +1499,4 @@ section {
 #hero h3{
   color:#fff;
 }
+
