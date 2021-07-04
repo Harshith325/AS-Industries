@@ -491,23 +491,29 @@
       {{!-- <div class="map">
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
       </div> --}}
-      <div class="map" id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-        <div  id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-            var setting = {"height":356,"width":1349,"zoom":16,"queryString":"A.S INDUSTRIES, 29, 4th Cross Road, Agrahara Dasarahalli, Rajajinagar, Bengaluru, Karnataka, India","place_id":"ChIJV4d1sw89rjsR-BEAASXHHQo","satellite":false,"centerCoord":[12.980783153660637,77.54312919999998],"cid":"0xa1dc725010011f8","lang":"en","cityUrl":"/india/bangalore","cityAnchorText":"Map of Bangalore, South Kerala, India","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"539174"};
-            var d = document;
-            var s = d.createElement('script');
-            s.src = 'https://1map.com/js/script-for-user.js?embed_id=539174';
-            s.async = true;
-            s.onload = function (e) {
-              window.OneMap.initMap(setting)
-            };
-            var to = d.getElementsByTagName('script')[0];
-            to.parentNode.insertBefore(s, to);
-          })();</script><a href="https://1map.com/map-embed">1 Map</a>
+      <div class="container map-container">
+        <div class="row">
+          <div class="col-12">
+            <div class="map" id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+            <div  id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                var setting = {"height":356,"zoom":16,"queryString":"A.S INDUSTRIES, 29, 4th Cross Road, Agrahara Dasarahalli, Rajajinagar, Bengaluru, Karnataka, India","place_id":"ChIJV4d1sw89rjsR-BEAASXHHQo","satellite":false,"centerCoord":[12.980783153660637,77.54312919999998],"cid":"0xa1dc725010011f8","lang":"en","cityUrl":"/india/bangalore","cityAnchorText":"Map of Bangalore, South Kerala, India","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"539174"};
+                var d = document;
+                var s = d.createElement('script');
+                s.src = 'https://1map.com/js/script-for-user.js?embed_id=539174';
+                s.async = true;
+                s.onload = function (e) {
+                  window.OneMap.initMap(setting)
+                };
+                var to = d.getElementsByTagName('script')[0];
+                to.parentNode.insertBefore(s, to);
+              })();</script><a href="https://1map.com/map-embed">1 Map</a>
+          </div>
+          </div>
+        </div>
       </div>
-      <div class="container">
-
-        <div class="info-wrap mt-">
+      <div class="container ">
+        <div class="contact-container">
+        <div class="info-wrap mt-5">
           <div class="row">
             <div class="col-lg-4 info">
               <i class="ri-map-pin-line"></i>
@@ -518,13 +524,13 @@
             <div class="col-lg-4 info mt-4 mt-lg-0">
               <i class="ri-mail-line"></i>
               <h4>Email:</h4>
-              <p>ankitasi@hotmail.com<br>nathamlkothari@gmail.com</p>
+              <p><a href="mailto:ankitasi@hotmail.com">ankitasi@hotmail.com</a><br><a href="nathamlkothari@gmail.com">nathamlkothari@gmail.com</a></p>
             </div>
 
             <div class="col-lg-4 info mt-4 mt-lg-0">
               <i class="ri-phone-line"></i>
               <h4>Call:</h4>
-              <p>+91 98450 77081<br>+91 96639 92650</p>
+              <p><a href="+919845077081">+91 98450 77081</a><br><a href="tel:+919663992650">+91 96639 92650</a></p>
             </div>
           </div>
         </div>
@@ -549,9 +555,9 @@
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
           </div> --}}
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="text-center mt-3"><button type="submit">Send Message</button></div>
         </form>
-
+  </div>
       </div>
     </section><!-- End Contact Section -->
 

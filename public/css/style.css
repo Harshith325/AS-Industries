@@ -1127,8 +1127,8 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  border-radius: 6px 6px 0 0;
 }
 
 .contact .info {
@@ -1157,10 +1157,13 @@ section {
   color: #354144;
 }
 
-.contact .info p {
+.contact .info p{
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
+  color: #62787d;
+}
+.contact .info a{
   color: #62787d;
 }
 
@@ -1171,9 +1174,11 @@ section {
 
 .contact .email-form {
   width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12); */
   padding: 30px;
   background: #fff;
+  border-radius: 0 0 6px 6px;
+  border-top: 1px solid #ddd;
 }
 
 .contact .email-form .form-group {
@@ -1248,6 +1253,14 @@ section {
   background: #0dd3fe;
 }
 
+.contact-container{
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.contact .form-control{
+  border-radius: 4px !important;
+  border: 1px solid #ddd !important;
+}
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);
@@ -1461,7 +1474,7 @@ section {
 
 .portfolio .section-title{
   margin-top: 50px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
 }
 .photo-footer{
   display: flex;
