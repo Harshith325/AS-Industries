@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Products</title>
+    </head>
+    <body>
+        {{>header}}
+        <main id="main">
+            <section id="portfolio" class="portfolio">
+                <div class="container">
+                    <div class="section-title">
+                    <span>Products</span>
+                    <h2>Products</h2>
+                    <p>Our products are of utmost quality and perfection</p>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-lg-12">
+                        <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-p1">P1</li>
+                        <li data-filter=".filter-p2">P2</li>
+                        <li data-filter=".filter-p3">P3</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="row pb-4">
+                        <div class="col-12">
+                          <form id="search-products">
+                            <input type="text" name="searchbox" id="searchbox" class="filterinput form-control" placeholder="Search products">
+                          </form>
+                        </div>
+                    </div>
+                    <div class="row portfolio-container">
+                      {{#each Products1}}
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-p1">
+                            <div class="portfolio-wrap">
+                            <img src="{{img}}" class="img-fluid" alt="">
+                            <div  class="portfolio-info">
+                                <h4>{{name}}</h4>
+                                <p>{{price}}</p>
+                                <div class="portfolio-links">
+                                <a href="{{img}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="p1"><i class="ri-zoom-in-line"></i></a>
+                                <a href="/products" title="View all products"><i class="ri-links-fill"></i></a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="photo-footer">
+                            <span class="name">{{name}}</span>
+                            <span>{{price}}</span>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{#each Products2}}
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-p2">
+                            <div class="portfolio-wrap">
+                            <img src="{{img}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>{{name}}</h4>
+                                <p>{{price}}</p>
+                                <div class="portfolio-links">
+                                <a href="{{img}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="p2"><i class="ri-zoom-in-line"></i></a>
+                                <a href="/products" title="View all products"><i class="ri-links-fill"></i></a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="photo-footer">
+                            <span class="name">{{name}}</span>
+                            <span>{{price}}</span>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{#each Products3}}
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-p3">
+                            <div class="portfolio-wrap">
+                              <img src="{{img}}" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                  <h4>{{name}}</h4>
+                                  <p>{{price}}</p>
+                                  <div class="portfolio-links">
+                                    <a href="{{img}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="p3"><i class="ri-zoom-in-line"></i></a>
+                                    <a href="/products" title="View all products"><i class="ri-links-fill"></i></a>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="photo-footer">
+                              <span class="name" >{{name}}</span>
+                              <span>{{price}}</span>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        {{>footer}}
+        <script>
+          /*const list = document.querySelector('.portfolio-container'); 
+          const searchBar = document.forms['search-products'].querySelector('input');
+          searchBar.addEventListener('keyup', e =>{
+            const term = e.target.value.toLowerCase();
+            const products =list.getElementsByClassName('portfolio-item');
+            Array.from(products).forEach(function(product){
+              const footer = product.getElementsByTagName('div')[1];
+              const title = footer.firstElementChild.textContent;
+              if(title.toLowerCase().indexOf(term) != -1){
+                product.style.display ='block'
+              }else{
+                product.style.display ='none'
+              }
+            })
+          }) */
+
+          $(document).ready(function() {
+              $("#searchbox").on("keyup", function(){
+                  var value = $(this).val().toLowerCase();
+                  $('.col-lg-4').filter(function() {
+                      $(this).toggle($(this).find('h4').text().toLowerCase().indexOf(value) > -1)
+                  });
+              });
+          });
+
+        </script>
+    </body>
+</html>
